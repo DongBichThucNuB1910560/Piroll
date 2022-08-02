@@ -1,0 +1,62 @@
+.service{
+    margin-top: 10rem;
+    background-color: $second-color;
+    &-list{
+        padding-top: 10rem;
+        height: 54rem;
+        @include flexbox();
+    }
+    &-column{
+        width: 25%;
+    }
+    &-item{
+        text-align: center;
+        height: 50%;
+        margin: 0 2rem;
+    }
+    &-content{
+        display: grid;
+    }
+    &-title{
+        font-size: 10pt;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: $primary-font;
+        color: $text-hd-color;
+        margin: 2rem 0;
+    }
+    &-desc{
+        font-size: 10pt;
+        font-family: $secondary-font;
+    }
+    &-icon{
+        font-size: 4rem;
+    }
+    @include maxWidth(1279px){
+        &-list{
+            flex-wrap: wrap;
+            height: 54rem;
+        }
+        &-item{
+            text-align: center;
+            height: 50%;
+            margin: 0 2rem;
+        }
+    }
+    @include maxWidth(767px){
+        margin-top: 6rem;
+        &-list{
+            height: 100%;
+        }
+        &-column{
+            width: 50%;
+        }
+        &-item{
+            height: auto;
+            margin-bottom: 3rem;
+        }
+        &-icon{
+            font-size: 3rem;
+        }
+    }
+}

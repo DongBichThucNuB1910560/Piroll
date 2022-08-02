@@ -1,0 +1,28 @@
+.work{
+    padding-top: 10rem;
+    @include blockBox();
+    &-video{
+        width: 1170px;
+        height: 570px;
+    }
+    @include maxWidth(1279px){
+        &-video{
+            width: 90%;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    @include maxWidth(767px){
+        padding-top: 6rem;
+        &-video{
+            width: 90%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .blockBox-content {
+            margin: 0 1rem;
+            text-align: center;
+        }
+    }
+}

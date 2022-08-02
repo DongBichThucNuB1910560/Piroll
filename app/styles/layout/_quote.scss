@@ -1,0 +1,69 @@
+.quote{
+    height: 50rem;
+    background-color: $primary-color;
+    color: white;
+    &-container{
+        padding-top: 16rem;
+    }
+    &-item{
+        width: 81rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+    &-content{
+        font-size: 20pt;
+        font-family: $primary-font;
+        line-height: 4rem;
+        padding: 0 10rem;
+    }
+    &-auditor{
+        font-size: 15pt;
+        font-family: $secondary-font;
+        margin-top: 2.5rem;
+    }
+    
+    .slick-arrow{
+        background-color: transparent;
+        color: white;
+        border: 0;
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 1rem 2rem;
+        position: absolute;
+        top: 70%;
+        z-index: 10;
+    }
+    .slick-prev{
+        left: 0;
+    }
+    .slick-next{
+        right: 0;
+    }
+    @include maxWidth(1023px){
+        &-container{
+            padding-top: 14rem;
+        }
+    }
+    @include maxWidth(767px){
+        height: 50%;
+        &-container{
+            padding-top: 3rem;
+        }
+        &-item{
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        &-content{
+            font-size: 10pt;
+            font-family: $primary-font;
+            line-height: 2.5rem;
+            padding: 0 3rem;
+        }
+        &-auditor{
+            font-size: 10pt;
+            font-family: $secondary-font;
+            margin: 2rem;
+        }
+    }
+}

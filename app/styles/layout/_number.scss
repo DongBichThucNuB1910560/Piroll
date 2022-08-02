@@ -1,0 +1,55 @@
+.number{
+    height: 240px;
+    background-color: $primary-color;
+    &-content{
+        padding-top: 10rem;
+    }
+    &-item{
+        width: 25%;
+        color: white;
+        display: flex;
+    }
+    &-icon{
+        font-size: 4rem;
+        margin-right: 25px;
+
+    }
+    &-para{
+        font-family: $secondary-font;
+        font-weight: bold;
+        font-size: 10pt;
+    }
+    &-count{
+        margin-bottom: 10px;
+    }
+    &-text{
+        text-transform: uppercase;
+    }
+    @include minWidth(768px){
+        &-content{
+            display: flex;
+        }
+    }
+    @include maxWidth(1023px){
+        &-icon{
+            font-size: 3rem;
+            margin-right: 15px;
+        }
+        &-para{
+            font-size: 8pt;
+        }
+    }
+    @include maxWidth(767px){
+        &-content {
+            padding-top: 1rem;
+        }
+        &-item{
+            width: 90%;
+            margin-top: 2rem;
+            margin-left: 2rem;
+        }
+        &-icon{
+            margin-right: 5rem;
+        }
+    }
+}

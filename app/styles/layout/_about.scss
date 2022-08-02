@@ -1,0 +1,74 @@
+.about{
+    padding-top: 10rem;
+    @include blockBox();
+    &-main{
+        position: absolute;
+        margin-top: 16.5rem;
+        width: 35%;
+    }
+    &-images{
+        height: 57rem;
+        object-fit: cover;
+    }
+    &-caption{
+        font-family: $primary-font;
+        font-size: 3rem;
+        color: $text-hd-color;
+        font-weight: bold;
+    }
+    &-item{
+        margin-top: 4rem;
+        &-content{
+            margin-bottom: 2rem;
+            font-family: $secondary-font;
+            color: $text-hd-color;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        &-name{
+            margin-right: 2rem;
+            font-size: 10pt;
+        }
+        &-line{
+            background-color: gray;
+            &-percent-1{
+                @include line(70%,3px)
+            }
+            &-percent-2{
+                @include line(60%,4px)
+            }
+            &-percent-3{
+                @include line(90%,3px)
+            }
+        }
+    }
+    @include maxWidth(1023px){
+        &-main{
+            width: 40%;
+            margin-left: 5rem;
+        }
+    }
+}
+@include maxWidth(767px){
+    .about{
+        padding-top: 6rem;
+        .blockBox-content{
+            margin: 0 1rem;
+            .blockBox-content-paragraph{
+                margin: 2rem 0;
+                font-size: 10pt;
+            }
+        }
+        &-main{
+            width: 90%;
+            margin-left: 2rem;
+        }
+        &-list{
+            left: 2rem;
+            width: 60%;
+        }
+        &-caption{
+            font-size: 2rem;
+        }
+    }
+}
